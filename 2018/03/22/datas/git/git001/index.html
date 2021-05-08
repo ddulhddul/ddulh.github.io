@@ -1,0 +1,155 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>생활코딩. 지옥에서 온 Git 정리 · ddulh's</title><meta name="description" content="잡념"><meta name="og:title" content="생활코딩. 지옥에서 온 Git 정리"><meta name="og:type" content="website"><meta name="og:url" content="https://ddulhddul.github.io/2018/03/22/datas/git/git001/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content="잡념"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="https://ddulhddul.github.io/atom.xml" title="ddulh's"></head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">생활코딩. 지옥에서 온 Git 정리</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/stunstunstun" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"><a href="/categories/Git" target="_self"><span>GIT</span></a></div><div class="post-date">Mar 22, 2018</div></div></div><div class="post-share"><div class="fb-like" data-href="https://ddulhddul.github.io/2018/03/22/datas/git/git001/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="https://ddulhddul.github.io/2018/03/22/datas/git/git001/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><p><a href="https://opentutorials.org/course/2708" target="_blank" rel="noopener">생활코딩 - 지옥에서 온 Git</a></p>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><h2 id="Git-init-Setting"><a href="#Git-init-Setting" class="headerlink" title="Git init Setting"></a>Git init Setting</h2><ol start="0">
+<li>git bash 구동</li>
+<li><p>SSL 인증서 검증을 끕니다.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HTTP POST 최대 사이즈를 수정합니다.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.postBuffer 524288000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git bash 구동시, 초기 path 설정</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="variable">$home</span></span><br><span class="line">$ vi .bashrc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Edit 창에 cd %프로젝트 경로% 입력 후 :wq<ul>
+<li>(본인의 프로젝트 경로를 입력한다.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Git bash User name &amp; Email Setting</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"name"</span></span><br><span class="line">$ git config --global user.email <span class="string">"mailmail@mail.com"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="GIt-에서-특정-파일을-제외하는-방법"><a href="#GIt-에서-특정-파일을-제외하는-방법" class="headerlink" title="GIt 에서 특정 파일을 제외하는 방법"></a>GIt 에서 특정 파일을 제외하는 방법</h2><ul>
+<li>저장소에서 파일 삭제하지만 내 작업공간에 필요한 경우  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm --cached filename</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>저장소에도 필요하고 내 작업공간도 필요한 경우  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git update-index --assume-unchanged [path]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="버전-관리의-본질"><a href="#버전-관리의-본질" class="headerlink" title="버전 관리의 본질"></a>버전 관리의 본질</h1><h2 id="1-설치-및-실습-방법"><a href="#1-설치-및-실습-방법" class="headerlink" title="1. 설치 및 실습 방법"></a>1. 설치 및 실습 방법</h2><ul>
+<li><a href="http://git-scm.com" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://codeonweb.com/dashboard" target="_blank" rel="noopener">code on web</a></li>
+</ul>
+<h2 id="2-저장소-만들기"><a href="#2-저장소-만들기" class="headerlink" title="2. 저장소 만들기"></a>2. 저장소 만들기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<h2 id="3-git이-관리할-대상으로-파일-등록"><a href="#3-git이-관리할-대상으로-파일-등록" class="headerlink" title="3. git이 관리할 대상으로 파일 등록"></a>3. git이 관리할 대상으로 파일 등록</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim f1.txt</span><br><span class="line"><span class="comment"># typing 'source : 1'</span></span><br><span class="line">$ git add f1.txt</span><br><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+<h2 id="4-버전-만들기-commit"><a href="#4-버전-만들기-commit" class="headerlink" title="4. 버전 만들기 (commit)"></a>4. 버전 만들기 (commit)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Commiter Info Setting</span></span><br><span class="line">$ git config --global user.name <span class="string">"name"</span></span><br><span class="line">$ git config --global user.email <span class="string">"mailmail@mail.com"</span></span><br><span class="line"><span class="comment"># Commit</span></span><br><span class="line">$ git commit</span><br><span class="line"><span class="comment"># typing commit message 'version 1'</span></span><br><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-Stage-area"><a href="#5-Stage-area" class="headerlink" title="5. Stage area"></a>5. Stage area</h2><p>Commit 전에 Add를 하는 이유는, 선택적으로 파일을 버전에 포함시키기 위함.<br>Add 를 하면 Stage Area 에 등록된다.</p>
+<h2 id="6-변경사항-확인하기"><a href="#6-변경사항-확인하기" class="headerlink" title="6. 변경사항 확인하기"></a>6. 변경사항 확인하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 각각의 커밋과 커밋 사이 소스 차이 확인 가능</span></span><br><span class="line">$ git <span class="built_in">log</span> -p</span><br><span class="line"><span class="comment"># 해당 커밋 이전의 내용만 확인 가능</span></span><br><span class="line">$ git <span class="built_in">log</span> 48d495b0580194d38bd49bc4993f4bedf26a28aa</span><br><span class="line"><span class="comment"># 해당 커밋 사이의 변경 내용 확인</span></span><br><span class="line">$ git diff ee40b63a6e923cee04ba9dc3ae9306e50a9e53f9..08eaffc820df097f0746359d5d70cb15ba8b03b5</span><br><span class="line"><span class="comment"># 현재 어떤 작업 했는지 확인 가능</span></span><br><span class="line">$ git diff</span><br></pre></td></tr></table></figure>
+<h2 id="7-과거의-버전으로-돌아가기"><a href="#7-과거의-버전으로-돌아가기" class="headerlink" title="7. 과거의 버전으로 돌아가기"></a>7. 과거의 버전으로 돌아가기</h2><p>현재의 로그를 취소해서 과거로 돌아가고 싶다 ??</p>
+<ol>
+<li><p>Reset</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 08eaffc820df097f0746359d5d70cb15ba8b03b5 이후의 버전을 삭제</span></span><br><span class="line">$ git reset 08eaffc820df097f0746359d5d70cb15ba8b03b5 --hard</span><br></pre></td></tr></table></figure>
+<p> 실제로는 버린게 아니라, 남아있다. 보이지 않을뿐.</p>
+</li>
+<li><p>Revert<br> 커밋을 날리는 것이 아니라 해당 커밋을 취소하면서 새로운 버전을 생성한다.</p>
+</li>
+</ol>
+<h2 id="8-명령의-빈도와-메뉴얼-보는-방법"><a href="#8-명령의-빈도와-메뉴얼-보는-방법" class="headerlink" title="8. 명령의 빈도와 메뉴얼 보는 방법"></a>8. 명령의 빈도와 메뉴얼 보는 방법</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Git의-원리"><a href="#Git의-원리" class="headerlink" title="Git의 원리"></a>Git의 원리</h1><h2 id="1-gistory-설치"><a href="#1-gistory-설치" class="headerlink" title="1. gistory 설치"></a>1. gistory 설치</h2><blockquote>
+<p>.git 내부 변화를 살펴보며, git 이 어떻게 작동하는지 알아보자.</p>
+</blockquote>
+<ol>
+<li>python을 설치합니다. (python2, 3 모두 호환됩니다)<br> <a href="http://python.org/" target="_blank" rel="noopener">http://python.org/</a></li>
+<li>pip로 설치합니다. <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install gistory</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="2-git-add의-원리"><a href="#2-git-add의-원리" class="headerlink" title="2. git add의 원리"></a>2. git add의 원리</h2><p>내용이 같으면 같은 파일명에 담긴다. // 어떻게 ? // sha1</p>
+<h2 id="3-objects-파일명의-원리"><a href="#3-objects-파일명의-원리" class="headerlink" title="3. objects 파일명의 원리"></a>3. objects 파일명의 원리</h2><p>각각의 버전은 tree, blob, commit 으로 구성된다.</p>
+<h2 id="4-status의-원리"><a href="#4-status의-원리" class="headerlink" title="4. status의 원리"></a>4. status의 원리</h2><p>working directory - index, staging area, cache - repository<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>최신 commit 과 index 의 내용을 비교해서 알려준다.<br><img src="https://i.stack.imgur.com/caci5.png" alt="https://i.stack.imgur.com/caci5.png"><ul>
+<li>Add 하면 Staging Area(index 파일)에 등록 // Commit 대기상태</li>
+<li>Commit 하면 Local Repository에 등록</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="git의-혁신-branch"><a href="#git의-혁신-branch" class="headerlink" title="git의 혁신 - branch"></a>git의 혁신 - branch</h1><h2 id="1-branch-만들기"><a href="#1-branch-만들기" class="headerlink" title="1. branch 만들기"></a>1. branch 만들기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">$ git branch exp <span class="comment"># exp 이름의 branch 생성</span></span><br><span class="line">$ git checkout exp <span class="comment"># exp branch 로 이동</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-branch-정보확인"><a href="#2-branch-정보확인" class="headerlink" title="2. branch 정보확인"></a>2. branch 정보확인</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">$ git <span class="built_in">log</span> --branches --graph <span class="comment"># 현재 체크아웃되어있는 브랜치 말고 저장소의 모든 브랜치를 보여줌</span></span><br><span class="line">$ git <span class="built_in">log</span> --branches --graph --oneline <span class="comment"># 한줄로 표현</span></span><br><span class="line">$ git <span class="built_in">log</span> master..exp <span class="comment"># master엔 없고 exp에 있는 커밋을 보여줌</span></span><br><span class="line">$ git diff master..exp <span class="comment"># master엔 없고 exp에 있는 내용을 보여줌</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>stree // GUI 버전관리툴</li>
+</ul>
+<h2 id="3-branch-병합"><a href="#3-branch-병합" class="headerlink" title="3. branch 병합"></a>3. branch 병합</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># exp 의 내용을 master로 옮기는 방법</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge exp</span><br><span class="line"></span><br><span class="line"><span class="comment"># master 의 내용을 exp로 옮기는 방법</span></span><br><span class="line">$ git checkout exp</span><br><span class="line">$ git merge master</span><br><span class="line"></span><br><span class="line"><span class="comment"># exp branch 삭제</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git branch -d exp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>두개의 부모를 갖는 하나의 commit 이 만들어진다.</li>
+</ul>
+<h2 id="4-branch-수련"><a href="#4-branch-수련" class="headerlink" title="4. branch 수련"></a>4. branch 수련</h2><p><a href="https://www.git-scm.com" target="_blank" rel="noopener">https://www.git-scm.com</a><br><a href="https://www.git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" target="_blank" rel="noopener">3.2 Git Branching - Basic Branching and Merging</a></p>
+<ul>
+<li><p>Fast-Forward</p>
+<ul>
+<li>(master) git merge hotfix</li>
+<li>master는 hotfix 를 가리키게 된다. (별도의 커밋을 생성하지 않는다.)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b <span class="string">'iss53'</span></span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge hotfix</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Recursive Stragety</p>
+<ul>
+<li>master 와 iss53 의 공통의 조상을 찾는다.</li>
+<li><p>두가지의 브랜치를 합친 별도의 머지 커밋을 만든다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">$ git merge iss53</span><br><span class="line">```    </span><br><span class="line"></span><br><span class="line"><span class="comment">## 5. branch 병합 시 충돌해결</span></span><br><span class="line">- 같은 파일임에도 수정한 위치가 다르면 자동 merge.</span><br><span class="line">- 같은 위치를 수정했을때 merge -&gt; conflict</span><br><span class="line">    ```bash</span><br><span class="line">     (master|MERGING)</span><br><span class="line">    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">    <span class="keyword">function</span> b()</span><br><span class="line">    =======</span><br><span class="line">    <span class="keyword">function</span> c()</span><br><span class="line">    &gt;&gt;&gt;&gt;&gt;&gt;&gt; exp</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">a</span></span>()&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>자동병합에 실패했기 때문에, 충돌 해결을 위임한 것.</p>
+</li>
+</ul>
+</li>
+<li><p>해결 방법</p>
+<ol>
+<li>충돌난 부분 수정</li>
+<li>git add 해당파일</li>
+<li>git commit -m ‘’</li>
+</ol>
+</li>
+</ul>
+<h2 id="6-stash"><a href="#6-stash" class="headerlink" title="6. stash"></a>6. stash</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git checkout master </span><br><span class="line"><span class="comment"># 작업이 끝나지 않았으면 작업 그대로 master 로 가기때문에 곤란하다.</span></span><br><span class="line"></span><br><span class="line">$ git stash</span><br><span class="line"><span class="comment"># Saved working directory and index state WIP on exp: b920916 10</span></span><br><span class="line"><span class="comment"># 작업중인 변경사항들이 save되었다.</span></span><br><span class="line">$ git status</span><br><span class="line"></span><br><span class="line">$ git stash apply</span><br><span class="line"><span class="comment"># 작업중인 변경사항들이 load되었다.</span></span><br><span class="line"></span><br><span class="line">$ git stash list</span><br><span class="line"><span class="comment"># stash@&#123;0&#125;: WIP on exp: b920916 10</span></span><br><span class="line"></span><br><span class="line">$ git reset --hard HEAD</span><br><span class="line">$ git stash apply</span><br><span class="line"><span class="comment"># 명시적으로 삭제하지 않는이상 stash 는 살아있다.</span></span><br><span class="line"></span><br><span class="line">$ vim f2.txt <span class="comment"># 신규파일</span></span><br><span class="line">$ git stash</span><br><span class="line">$ git stash list</span><br><span class="line"><span class="comment"># stash@&#123;0&#125;: WIP on exp: b920916 10  // 방금것</span></span><br><span class="line"><span class="comment"># stash@&#123;1&#125;: WIP on exp: b920916 10  // 그 이전것</span></span><br><span class="line"></span><br><span class="line">$ git stash apply <span class="comment"># 가장 최근 stash 가 적용된다.</span></span><br><span class="line">$ git stash drop <span class="comment"># 최근 stash 제거</span></span><br><span class="line"></span><br><span class="line">$ git stash apply; git stash drop;</span><br><span class="line">$ git stash pop</span><br><span class="line"><span class="comment"># 적용하고 삭제하고</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Untracked files 는 stash 에 저장되지 않는다. </span></span><br><span class="line"><span class="comment"># 버전관리가 되고있는 파일들만 stash 할 수 있다.</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="끝이-열려-있는-수업과-학습"><a href="#끝이-열려-있는-수업과-학습" class="headerlink" title="끝이 열려 있는 수업과 학습"></a>끝이 열려 있는 수업과 학습</h1><h2 id="3-way-merge"><a href="#3-way-merge" class="headerlink" title="3 way merge"></a>3 way merge</h2><table>
+<thead>
+<tr>
+<th>Me</th>
+<th>Base</th>
+<th>Other</th>
+<th>2way merge</th>
+<th>3way merge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> A</td>
+<td>A</td>
+<td>-</td>
+<td><font color="red">?</font></td>
+<td>-</td>
+</tr>
+<tr>
+<td> B</td>
+<td>B</td>
+<td>B</td>
+<td>B</td>
+<td>B</td>
+</tr>
+<tr>
+<td> 1</td>
+<td>C</td>
+<td>2</td>
+<td><font color="red">?</font></td>
+<td><font color="red">?</font></td>
+</tr>
+<tr>
+<td> -</td>
+<td>D</td>
+<td>D</td>
+<td><font color="red">?</font></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>2way merge : base 를 보지않고 2개를 병합</li>
+<li>3way merge : base를 참고로 해서 2개를 병합</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2018/03/17/datas/react/react_d2/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2018/04/01/DeepLearning/ml011/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="https://ddulhddul.github.io/2018/03/22/datas/git/git001/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2012 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
