@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ddulhddul.github.io/2021/05/12/invest/0.%20Todo/</loc>
+    
+    <lastmod>2021-05-12T11:57:44.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ddulhddul.github.io/2021/05/09/invest/0.%20%EB%A7%A4%EB%A7%A4%EC%9B%90%EC%B9%99/</loc>
+    
+    <lastmod>2021-05-12T11:55:14.284Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ddulhddul.github.io/2021/05/09/invest/0.%20%EB%A7%A4%EC%96%B5%EB%82%A8%20%EC%A0%95%EB%A6%AC/</loc>
+    
+    <lastmod>2021-05-11T13:42:11.043Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ddulhddul.github.io/2021/04/24/invest/blog/210424%20%ED%95%B4%EC%8B%9C%EB%93%9C%EC%BD%94%EC%9D%B8%EC%A0%95%EB%A6%AC/</loc>
     
     <lastmod>2021-05-08T15:06:14.155Z</lastmod>
@@ -79,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/2021/05/09/invest/0.%20%EB%A7%A4%EC%96%B5%EB%82%A8%20%EC%A0%95%EB%A6%AC/</loc>
-    
-    <lastmod>2021-05-08T15:03:46.620Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ddulhddul.github.io/2021/05/09/invest/0.%20%EB%A7%A4%EB%A7%A4%EC%9D%BC%EC%A7%80/</loc>
     
     <lastmod>2021-05-08T15:03:39.809Z</lastmod>
@@ -93,21 +107,14 @@
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/2021/05/09/invest/0.%20%EB%A7%A4%EB%A7%A4%EC%9B%90%EC%B9%99/</loc>
-    
-    <lastmod>2021-05-08T15:03:17.749Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ddulhddul.github.io/project/index.html</loc>
+    <loc>https://ddulhddul.github.io/tags/index.html</loc>
     
     <lastmod>2019-06-06T10:04:52.556Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/tags/index.html</loc>
+    <loc>https://ddulhddul.github.io/project/index.html</loc>
     
     <lastmod>2019-06-06T10:04:52.556Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/2018/03/02/DeepLearning/ml009/</loc>
-    
-    <lastmod>2019-06-06T10:04:52.485Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ddulhddul.github.io/2018/01/28/DeepLearning/ml005/</loc>
     
     <lastmod>2019-06-06T10:04:52.485Z</lastmod>
@@ -184,14 +184,21 @@
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/2018/01/21/DeepLearning/ml002/</loc>
+    <loc>https://ddulhddul.github.io/2018/03/02/DeepLearning/ml009/</loc>
+    
+    <lastmod>2019-06-06T10:04:52.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ddulhddul.github.io/2018/01/28/DeepLearning/ml003/</loc>
     
     <lastmod>2019-06-06T10:04:52.484Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ddulhddul.github.io/2018/01/28/DeepLearning/ml003/</loc>
+    <loc>https://ddulhddul.github.io/2018/01/21/DeepLearning/ml002/</loc>
     
     <lastmod>2019-06-06T10:04:52.484Z</lastmod>
     
